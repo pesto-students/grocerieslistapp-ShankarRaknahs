@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Grocery Store | Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index.css" />
+</head>
+
+<body>
+
+    <div class="home-container">
+        <div class="home-header">
+            <h1 id="#welcomeuser" class="welcome-user"> </h1>
+            <button type="button" class="logout-btn" onclick="return logoutUser()">Logout</button>
+        </div>
+        <div class="home-body">
+            <input type="text" id="#inputitem" class="additem-input" placeholder="Enter the item name to add in the list"
+            required>
+            <button id="#additem" class="additem-btn" onclick="addInputItem()">+ Add Item</button>
+                <h5 id="#maxitems" class="max-items"> </h5>
+                <ul id="#item-container" class="item-container">
+                </ul>
+        </div>
+    </div>
+
+
+    <script src="../scripts/database.js"></script>
+    <script src="../scripts/user.js"></script>
+    <script src="../../config.js"></script>
+    <script src="../scripts//service.js"></script>
+</body>
+
+</html>
