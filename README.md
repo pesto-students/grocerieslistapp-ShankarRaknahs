@@ -34,3 +34,5 @@ groceryapp (root)
   - config.js (session info, DB info, Error messages)
   
   
+  
+  Deployment url - https://pesto-grocery-sachin.netlify.app/
