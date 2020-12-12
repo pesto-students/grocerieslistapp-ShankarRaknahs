@@ -46,6 +46,7 @@ function registerUser(){
         pushError(APPCONFIG.errorMsgs.usernameNotAvailable);
     }else {
         addUser(username,password);
+        updateData(APPCONFIG.sessionKey.activeUser, username);
         reDirect(APPCONFIG.views.home);
     }
     return false;

@@ -4,7 +4,7 @@
         if(!currentUser){
             reDirect(APPCONFIG.views.login);
         }else{
-            let userItems = getUserItems(currentUser);
+            let userItems = getUserItems(currentUser) || [];
             document.getElementById("#welcomeuser").innerHTML = 'Hey ' + currentUser;
             document.getElementById("#maxitems").innerHTML = `You can add ${APPCONFIG.dataKey.listPerUser - userItems.length} more items`
             displayItems(userItems);
@@ -61,11 +61,16 @@ function displayItems(userItems){
 function getUserItems(username){
     try {
         let items = readData(APPCONFIG.dataKey.activeTable) || [];
-        if(items.length){
+        if(items.length > 0){
             const item = items.find(
                 (item) => item.username === username
             );
-            return item.useritems
+            if(item){
+                return item.useritems
+            }else {
+                return []
+            }
+            
         }else{
             return []
         }
@@ -81,7 +86,6 @@ function saveUserItems(username,...userItems){
         let items = readData(APPCONFIG.dataKey.activeTable) || [];
         let newItem = {"username": username, "useritems": userItems}
 
-        if(items.length < APPCONFIG.sessionKey.totalUsers){
             for(var counter=0; counter < items.length; counter++){
                 if(items[counter].username == username ) {
                     items.splice(counter,1);
@@ -90,10 +94,7 @@ function saveUserItems(username,...userItems){
             }
             items.push(newItem);        
             updateData(APPCONFIG.dataKey.activeTable,items);
-            reDirect(APPCONFIG.views.home);
-        }else{
-        pushError(APPCONFIG.errorMsgs.addItemError)
-    }
+            reDirect(APPCONFIG.views.home);    
 } else {
     pushError(APPCONFIG.errorMsgs.addItemError)
 }
