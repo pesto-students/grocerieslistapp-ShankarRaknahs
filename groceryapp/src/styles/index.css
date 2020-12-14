@@ -207,3 +207,37 @@ padding: 10px;
     height: 20%;
     background-color: #A4B0BD
 }  
+.edit-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    width: 50%; 
+    height: 15%; 
+    transform: translate(30%, -500%);
+    overflow: auto; 
+    background-color: #ffffff;
+    border: 1px solid rgb(20, 19, 19);
+}
+.edit-modal-content{
+    background-color: #d5bbbb;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid rgb(20, 19, 19);
+    width: 40%; 
+}
+.edit-close {
+  color: #f1593f;
+  float: right;
+  padding: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.edit-close:hover,
+.edit-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  

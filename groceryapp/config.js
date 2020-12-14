@@ -18,6 +18,8 @@ const APPCONFIG = {
         "addItemError": "Error while trying to add user items",
         "noData": "Please enter the item details to Add",
         "noItem": "Currently there are no items added in the List. Add items to view in the list",
+        "noChanges": "No changes to save",
+        "existingItem": "Item already exisits in the list, try a diferent name"
     },
     "views": {
         "home": "home.html",
