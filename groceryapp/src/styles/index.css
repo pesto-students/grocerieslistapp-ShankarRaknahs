@@ -1,0 +1,243 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container 
+{
+    height: 90%;
+    width: 60%;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(../../asset/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box
+{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    left: 680px;
+    top: 90px;
+    margin: 6% auto;
+    background: rgb(226,226,226);
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 3px;
+}
+.button-box
+{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #808080;
+    border-radius: 30px;
+}
+.toggle-btn 
+{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    border-radius: 50px;
+    transition: .5s;
+}
+.input-group
+{
+    top: 100px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field
+{
+    width: 130%;
+    padding: 10px 10px;
+    margin: 5px 10px;
+    margin-top: 10px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn
+{
+    width: 85%;
+    padding: 10px 0px;
+    cursor: pointer;
+    display: block;
+    margin: 25px 100px;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+#login 
+{
+    right: 50px;
+}
+#register
+{
+    left:500px
+}
+.home-container{
+    height: 90%;
+    width: 90%;
+    margin: 40px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+}
+.logout-btn
+{
+    width: 10%;
+    padding: 10px 10px;
+    float: right;
+    cursor: pointer;
+    display: block;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.welcome-user
+{
+    float: left;
+    font-family: fantasy;
+}
+.home-header
+{
+position: relative;
+}
+.home-body
+{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    margin: 6% auto;
+    background: rgb(226,226,226);
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 3px; 
+}
+.item-field{
+    width: 40%;
+    padding: 10px 10px;
+    margin: 5px 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;    
+}
+.item-container
+{
+padding: 10px;
+}
+.item-list {
+    margin-top: 30px;
+    display: inline-block;
+}
+.additem-input
+{
+    width: 50%;
+    padding: 10px 10px;
+    margin: 5px 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    
+}
+.additem-btn {
+    width: 10%;
+    padding: 10px 0px;
+    cursor: pointer;
+    display: block;
+    float: right;
+    margin: 10px;
+    margin-right: 40px;
+    background: linear-gradient(to right, #f1593f, #ee6f8d);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.max-items{
+    padding: 10px;
+    font-style: italic;
+}
+.delete-btn {
+    top: 0;
+    left: 0;   
+    margin-right: 10px;
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    width: 10%;
+    background: linear-gradient(to right, #770606, #db7496);
+    border-radius: 50px;
+    transition: .5s;
+}
+.item-card 
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    padding: 10px;
+    margin: 20px;
+    width: 50%;
+    height: 20%;
+    background-color: #A4B0BD
+}  
+.edit-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    width: 50%; 
+    height: 15%; 
+    transform: translate(30%, -500%);
+    overflow: auto; 
+    background-color: #ffffff;
+    border: 1px solid rgb(20, 19, 19);
+}
+.edit-modal-content{
+    background-color: #d5bbbb;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid rgb(20, 19, 19);
+    width: 40%; 
+}
+.edit-close {
+  color: #f1593f;
+  float: right;
+  padding: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.edit-close:hover,
+.edit-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
